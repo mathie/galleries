@@ -19,4 +19,8 @@ group :development, :test do
   gem 'spring-commands-rspec'
   gem 'rspec-rails'
   gem 'capybara'
+
+  gem 'guard-rspec', require: false
+  gem 'guard-bundler', require: false
+  gem 'ruby_gntp', require: false
 end
