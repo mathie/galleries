@@ -1,0 +1,39 @@
+<hgroup class="page-header">
+  <h1>{{ image.title }}</h1>
+</hgroup>
+
+<ol class="breadcrumb" ng-controller="NavigationController">
+  <li>
+    <a href ng-click="rootPath()">
+      Home
+    </a>
+  </li>
+  <li>
+    <a href ng-click="galleriesPath()">
+      Galleries
+    </a>
+  </li>
+  <li>
+    <a href ng-click="galleryPath(image.gallery)">
+      {{ image.gallery.title }}
+    </a>
+  </li>
+  <li class="active">
+    <a href ng-click="currentPath()">
+      {{ image.title }}
+    </a>
+  </li>
+</ol>
+
+<div class="thumbnail">
+  <img ng-src="{{ image.image_url }}" alt="{{ image.title }}">
+  <div class="caption">
+    <h3>
+      {{ image.title }}
+    </h3>
+
+    <p>
+      {{ image.description }}
+    </p>
+  </div>
+</div>

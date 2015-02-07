@@ -25,6 +25,9 @@ gallery.config([ '$routeProvider',
       ).when('/galleries/:galleryId',
         templateUrl: 'galleries/show.html'
         controller: 'GalleryController'
+      ).when('/images/:galleryId',
+        templateUrl: 'images/show.html'
+        controller: 'ImageController'
       ).otherwise(
         redirectTo: '/'
       )

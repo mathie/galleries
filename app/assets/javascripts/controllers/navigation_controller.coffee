@@ -19,4 +19,7 @@ controllers.controller('NavigationController', [ '$scope', '$location',
 
     $scope.galleryPath = (gallery) ->
       $location.url("/galleries/#{gallery.id}")
+
+    $scope.imagePath = (image) ->
+      $location.url("/images/#{image.id}")
 ])

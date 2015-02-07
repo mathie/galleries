@@ -23,12 +23,12 @@
 <div class="row">
   <div class="col-sm-6 col-md-4" ng-repeat="image in gallery.images">
     <div class="thumbnail">
-      <a href ng-click="showImage(image)">
+      <a href ng-click="imagePath(image)">
         <img ng-src="{{ image.image_url }}" alt="{{ image.title }}">
       </a>
       <div class="caption">
         <h3>
-          <a href ng-click="showImage(image)">
+          <a href ng-click="imagePath(image)">
             {{ image.title }}
           </a>
         </h3>

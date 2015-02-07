@@ -64,4 +64,7 @@ controllers.controller('GalleryController', [ '$scope', '$location',
     # duplicating it here.
     $scope.galleriesPath = ->
       $location.url("/galleries")
+
+    $scope.imagePath = (image) ->
+      $location.url("/images/#{image.id}")
 ])
