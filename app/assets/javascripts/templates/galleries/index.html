@@ -14,3 +14,24 @@
     </a>
   </li>
 </ol>
+
+<div class="row">
+  <div class="col-sm-6 col-md-4" ng-repeat="gallery in galleries">
+    <div class="thumbnail">
+      <a href ng-click="showGallery(gallery)">
+        <img ng-src="{{ gallery.key_image_url }}" alt="{{ gallery.title }}">
+      </a>
+      <div class="caption">
+        <h3>
+          <a href ng-click="showGallery(gallery)">
+            {{ gallery.title }}
+          </a>
+        </h3>
+
+        <p>
+          {{ gallery.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
