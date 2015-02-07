@@ -15,8 +15,15 @@ assets_paths = Rails.application.config.assets.paths
 bower_components = Rails.root.join('vendor', 'assets', 'bower_components')
 assets_paths << bower_components
 
-bootstrap_asset_dirs = File.join(bower_components, 'bootstrap-sass-official', 'assets', '*')
-Dir[bootstrap_asset_dirs].each do |asset_dir|
+bootstrap_assets_dir = File.join(bower_components, 'bootstrap-sass-official', 'assets')
+bootstrap_asset_dirs = [
+  'fonts',
+  'images',
+  'javascripts',
+  'stylesheets'
+].map { |dir| File.join(bootstrap_assets_dir, dir) }
+
+bootstrap_asset_dirs.each do |asset_dir|
   assets_paths << asset_dir
 end
 
