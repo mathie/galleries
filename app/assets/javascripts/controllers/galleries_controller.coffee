@@ -27,7 +27,12 @@ galleries = [
   }
 ]
 
-controllers.controller('GalleriesController', [ '$scope',
-  ($scope) ->
+controllers.controller('GalleriesController', [ '$scope', '$location',
+  ($scope, $location) ->
     $scope.galleries = galleries
+
+    # FIXME: This should be called from the NavigationController instead of
+    # duplicating it here.
+    $scope.galleryPath = (gallery) ->
+      $location.url("/galleries/#{gallery.id}")
 ])
