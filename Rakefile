@@ -4,3 +4,11 @@
 require File.expand_path('../config/application', __FILE__)
 
 Rails.application.load_tasks
+
+Rake::Task["assets:precompile"].clear
+namespace :assets do
+  task :precompile => 'assets:environment' do
+    puts "Not really precompiling assets."
+    puts Rails.application.assets.inspect
+  end
+end
