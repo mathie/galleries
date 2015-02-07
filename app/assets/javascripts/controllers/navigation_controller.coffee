@@ -10,4 +10,7 @@ controllers.controller('NavigationController', [ '$scope', '$location',
 
     $scope.rootPath = ->
       $location.url('/')
+
+    $scope.galleriesPath = ->
+      $location.url('/galleries')
 ])

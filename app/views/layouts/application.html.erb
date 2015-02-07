@@ -26,7 +26,10 @@
         <div class="collapse navbar-collapse" id="primary-navbar-collapse">
           <ul class="nav navbar-nav">
             <li ng-class="{ active: isActiveExact('/') }">
-              <a href ng-click="rootPath()">WineDB</a>
+              <a href ng-click="rootPath()">Home</a>
+            </li>
+            <li ng-class="{ active: isActive('/galleries') }">
+              <a href ng-click="galleriesPath()">Galleries</a>
             </li>
           </ul>
         </div>
