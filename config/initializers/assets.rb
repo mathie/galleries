@@ -9,3 +9,13 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
+
+assets_paths = Rails.application.config.assets.paths
+
+bower_components = Rails.root.join('vendor', 'assets', 'bower_components')
+assets_paths << bower_components
+
+bootstrap_asset_dirs = File.join(bower_components, 'bootstrap-sass-official', 'assets', '*')
+Dir[bootstrap_asset_dirs].each do |asset_dir|
+  config.assets.paths << asset_dir
+end
