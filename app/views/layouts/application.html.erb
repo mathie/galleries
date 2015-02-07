@@ -11,7 +11,7 @@
     <%= csrf_meta_tags %>
   </head>
   <body ng-app="gallery">
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-default" role="navigation" ng-controller="NavigationController">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primary-navbar-collapse">
@@ -20,16 +20,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <%= link_to 'Gallery', root_path, class: 'navbar-brand' %>
+          <a href ng-click="rootPath()" class="navbar-brand">Gallery</a>
         </div>
 
         <div class="collapse navbar-collapse" id="primary-navbar-collapse">
           <ul class="nav navbar-nav">
-            <% if request.path == root_path %>
-              <li class="active"><%= link_to 'Home', root_path %></li>
-            <% else %>
-              <li><%= link_to 'Home', root_path %></li>
-            <% end %>
+            <li ng-class="{ active: isActiveExact('/') }">
+              <a href ng-click="rootPath()">WineDB</a>
+            </li>
           </ul>
         </div>
       </div>
