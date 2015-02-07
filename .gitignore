@@ -11,3 +11,8 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Ignore bower-managed assets
+/vendor/assets/bower.json
+/vendor/assets/.bowerrc
+/vendor/assets/bower_components

@@ -17,5 +17,12 @@ assets_paths << bower_components
 
 bootstrap_asset_dirs = File.join(bower_components, 'bootstrap-sass-official', 'assets', '*')
 Dir[bootstrap_asset_dirs].each do |asset_dir|
-  config.assets.paths << asset_dir
+  assets_paths << asset_dir
 end
+
+Rails.application.config.assets.precompile += %w(
+  bootstrap/glyphicons-halflings-regular.eot
+  bootstrap/glyphicons-halflings-regular.woff2
+  bootstrap/glyphicons-halflings-regular.woff
+  bootstrap/glyphicons-halflings-regular.ttf
+)
