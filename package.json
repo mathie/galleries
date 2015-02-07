@@ -1,0 +1,12 @@
+{
+  "name": "gallery",
+  "version": "0.1.0",
+  "description": "A simple photo gallery to explore some new technologies",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mathie/gallery"
+  },
+  "dependencies": {
+    "bower": "~1.3.12"
+  }
+}
