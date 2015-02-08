@@ -7,13 +7,13 @@
 #= require_self
 #= require_tree .
 
-gallery = angular.module('gallery', [
+galleries = angular.module('galleries', [
   'templates',
   'ngRoute',
   'controllers',
 ])
 
-gallery.config([ '$routeProvider',
+galleries.config([ '$routeProvider',
   ($routeProvider) ->
     $routeProvider
       .when('/',

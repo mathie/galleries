@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= tag :link, { rel: 'shortcut icon', href: image_path('favicon.ico') }, true %>
-    <title>Gallery</title>
+    <title>Galleries</title>
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= csrf_meta_tags %>
   </head>
-  <body ng-app="gallery">
+  <body ng-app="galleries">
     <nav class="navbar navbar-default" role="navigation" ng-controller="NavigationController">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -20,7 +20,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href ng-click="rootPath()" class="navbar-brand">Gallery</a>
+          <a href ng-click="rootPath()" class="navbar-brand">Galleries</a>
         </div>
 
         <div class="collapse navbar-collapse" id="primary-navbar-collapse">
