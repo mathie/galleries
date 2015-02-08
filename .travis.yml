@@ -14,4 +14,5 @@ before_script:
 - mkdir -p tmp/cache
 - cp config/database.travis.yml config/database.yml
 - RAILS_ENV=test bin/rake db:create db:schema:load
+- npm install -g bower
 - bin/rake bower:install
