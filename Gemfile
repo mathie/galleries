@@ -23,6 +23,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'poltergeist'
+  gem 'database_cleaner'
 
   gem 'guard-rspec', require: false
   gem 'guard-bundler', require: false
