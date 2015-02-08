@@ -25,6 +25,8 @@ group :development, :test do
   gem 'poltergeist'
   gem 'database_cleaner'
 
+  gem "codeclimate-test-reporter", require: false
+
   gem 'guard-rspec', require: false
   gem 'guard-bundler', require: false
   gem 'ruby_gntp', require: false
