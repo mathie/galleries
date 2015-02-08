@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature 'Static pages' do
+RSpec.feature 'Static pages', js: true do
   scenario 'Visiting the home page' do
     visit '/'
 

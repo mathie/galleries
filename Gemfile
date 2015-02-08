@@ -22,6 +22,7 @@ group :development, :test do
   gem 'spring-commands-rspec'
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'poltergeist'
 
   gem 'guard-rspec', require: false
   gem 'guard-bundler', require: false
