@@ -27,9 +27,13 @@ galleries = [
   }
 ]
 
-controllers.controller('GalleriesController', [ '$scope', '$location',
-  ($scope, $location) ->
+controllers.controller('GalleriesController', [ '$scope', '$location', '$resource',
+  ($scope, $location, $resource) ->
     $scope.galleries = galleries
+
+    Gallery = $resource('/galleries/:galleryId.json',
+      galleryId: '@id'
+    )
 
     # FIXME: This should be called from the NavigationController instead of
     # duplicating it here.
